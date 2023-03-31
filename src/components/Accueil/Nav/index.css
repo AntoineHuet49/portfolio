@@ -10,6 +10,10 @@
     padding-top: 2rem;
 }
 
+.menu {
+    size: 3rem 3rem;
+}
+
 .nav__list--show {
     border: 2px solid whitesmoke;
     border-radius: 5%;
