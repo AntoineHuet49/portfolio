@@ -44,6 +44,7 @@
     justify-content: center;
 }
 
+/* présentation */
 .main__presentation {
     display: flex;
     flex-direction: column;
@@ -63,6 +64,31 @@
     font-size: 2rem;
     text-decoration: underline;
     margin-bottom: 1rem;
+}
+
+/* projet */
+.main__projet {
+    position: absolute;
+    top: 30rem;
+    width: 90%;
+    background-color: rgba(191, 184, 178, 0.7);
+
+    border: 2px solid beige;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* card projet */
+.card {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 20rem;
+    width: 25%;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 /*

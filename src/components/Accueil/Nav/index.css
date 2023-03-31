@@ -47,9 +47,20 @@
     transition: 0.5s;
 }
 
-.nav__list>li, .nav__list--show>li {
-    margin: 1.5rem;
-    font-size: 2rem;
+.nav__list>li>button, .nav__list--show>li>button {
+    background: none;
+    margin: 0.4rem 2.7rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+}
+
+.nav__list>li>button:hover, .nav__list--show>li>button:hover {
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem black;
+}
+
+.nav__list>li>button:active, .nav__list--show>li>button:active {
+    box-shadow: inset -0.1rem -0.1rem 0.1rem 0.1rem black;
 }
 
 /*
