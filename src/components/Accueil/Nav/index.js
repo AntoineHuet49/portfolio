@@ -16,8 +16,12 @@ class Nav extends React.Component {
         const menuBtn = document.querySelector(".menu");
         menuBtn.classList.toggle('opened');
         this.toggleShow();
-        const container = document.querySelector(".container");
-        container.classList.toggle("blurNav")
+
+        const container = document.querySelector(".background");
+        container.classList.toggle("nav--blur")
+
+        const navList = document.querySelector("#nav__list");
+        (navList.classList.contains("nav__list")) ? navList.classList.replace("nav__list", "nav__list--show") : navList.classList.replace("nav__list--show", "nav__list")
     }
 
     toggleShow = () => {
@@ -37,6 +41,12 @@ class Nav extends React.Component {
                         </svg>
                     </button>
                 </div>
+                <ul id="nav__list" className="nav__list">
+                    <li>Accueil</li>
+                    <li>Projet</li>
+                    <li>Contact</li>
+                    <li>CV</li>
+                </ul>
             </nav>
         );
     }

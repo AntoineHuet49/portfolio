@@ -26,9 +26,11 @@ class Accueil extends React.Component {
         return (
             <div className="container">
                 <Nav setShow={this.setShow} getShow={this.getShow} show={this.show} />
-
-                <h1 className="mainTitle">Huet Antoine</h1>
-                <h2 className="secondTitle">Développeur web et web mobile</h2>
+                <div className='background'>
+                    <h1 className="mainTitle">Huet Antoine</h1>
+                    <span className='title__barre'></span>
+                    <h2 className="secondTitle">Développeur web et web mobile</h2>
+                </div>
             </div>
         );
     }
