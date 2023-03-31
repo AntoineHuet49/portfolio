@@ -1,4 +1,26 @@
 .container {
     height: 100vh;
     width: 100%;
+
+    background-image: url('/src/utils/images/montFuji.jpg');
+    background-size: cover;
+
+    transition: 0.7s;
+}
+
+.mainTitle, .secondTitle {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.mainTitle {
+    padding-top: 4rem;
+}
+
+/*
+flouter la page quand la Nav s'affiche
+*/
+.blurNav {
+   filter: blur(0.3rem);
+   transition: 0.7s;
 }
