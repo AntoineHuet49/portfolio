@@ -69,6 +69,10 @@ button {
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 
 /* Remove excess padding and border in Firefox 4+ */
 &::-moz-focus-inner {

@@ -61,6 +61,7 @@
 
 .nav__list>li>button:hover, .nav__list--show>li>button:hover {
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem black;
+    cursor: pointer;
 }
 
 .nav__list>li>button:active, .nav__list--show>li>button:active {

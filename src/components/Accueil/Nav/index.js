@@ -1,5 +1,6 @@
 import React from "react";
 import './index.css';
+import CV from '../../../utils/pdf/CV HUET Antoine.pdf'
 
 class Nav extends React.Component {
     // state
@@ -23,7 +24,7 @@ class Nav extends React.Component {
                     <li><button onClick={this.props.handleClickAccueil} className="nav__accueil">Accueil</button></li>
                     <li><button onClick={this.props.handleClickProjet} className="nav__projet">Projet</button></li>
                     <li><button className="nav__contact">Contact</button></li>
-                    <li><button className="nav__CV">CV</button></li>
+                    <li><button className="nav__CV"><a href={CV} download >CV</a></button></li>
                 </ul>
             </nav>
         );
