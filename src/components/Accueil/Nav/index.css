@@ -1,6 +1,19 @@
 #nav {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+
+.reseaux {
+    display: flex;
+}
+
+.reseaux > a {
+    margin: 2rem 0 0 2rem;
+    box-sizing: border-box;
+    display: block;
+    height: fit-content;
+    width: fit-content;
 }
 
 .menuBtn {
