@@ -1,15 +1,29 @@
 .container {
-    height: 100vh;
     width: 100%;
+    min-height: 100vh;
+}
+
+.content {
+    /* position: absolute; */
+    /* top: 0;
+    z-index: -1; */
+
+    width: 100%;
+    /* min-height: fit-content; */
+
+    display: flex;
+    flex-direction: column;
 }
 
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
 
     background-image: url('/src/utils/images/montFuji.jpg');
     background-size: cover;
@@ -36,7 +50,7 @@
 }
 
 .main {
-    height: auto;
+    height: fit-content;
     width: 100%;
 
     display: flex;
@@ -50,12 +64,11 @@
     flex-direction: column;
     align-items: center;
 
-    position: absolute;
-    bottom: 10rem;
+    margin-top: 10rem;
 
     background-color: rgba(191, 184, 178, 0.7);
 
-    width: 66%;
+    width: 70%;
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -68,8 +81,6 @@
 
 /* projet */
 .main__projet {
-    position: absolute;
-    top: 30rem;
     width: 90%;
     background-color: rgba(191, 184, 178, 0.7);
 
@@ -79,6 +90,26 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    margin: 5rem 0;
+}
+
+/* form contact */
+.main__contact {
+    width: 50%;
+
+    background-color: rgba(191, 184, 178, 0.7);
+
+    border: 2px solid beige;
+    border-radius: 1rem;
+
+    padding: 2rem;
+    margin: 5rem 0;
+}
+
+#contact__form {
+    display: flex;
+    flex-direction: column;
 }
 
 /*
@@ -87,4 +118,33 @@ flouter la page quand la Nav s'affiche
 .nav--blur {
    filter: blur(0.3rem);
    transition: 1s;
+}
+
+.footer {
+    width: 100%;
+    height: 2rem;
+
+    position: absolute;
+    bottom: 0;
+}
+
+@media (width < 900px) {
+    
+}
+
+@media (width < 900px) and (width > 760px) {
+    .mainTitle, .secondTitle {
+        font-size: 2rem;
+    }
+
+}
+
+@media (width < 760px) {
+    .mainTitle, .secondTitle {
+        font-size: 2rem;
+    }
+
+    .footer {
+        position: relative;
+    }
 }
