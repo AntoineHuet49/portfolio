@@ -1,7 +1,5 @@
 #nav {
     position: absolute;
-    
-    z-index: 1;
     width: 100%;
 
     display: flex;
@@ -25,6 +23,8 @@
     justify-content: end;
     padding-right: 2rem;
     padding-top: 2rem;
+
+    z-index: 1;
 }
 
 .menu {
@@ -47,6 +47,8 @@
     opacity: 100%;
 
     transition: 1s;
+
+    z-index: 2;
 }
 
 .nav__list {

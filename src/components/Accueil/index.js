@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './Card';
 import './index.css';
 import Nav from "./Nav";
+import emailjs from '@emailjs/browser';
 
 class Accueil extends React.Component {
     // properties
@@ -51,6 +52,26 @@ class Accueil extends React.Component {
         this.toggleNav();
     }
 
+    handleSubmitContactForm = (e) => {
+        e.preventDefault();
+
+        const form = document.getElementById('contact__form');
+
+        emailjs.sendForm('service_yki4w3w', 'template_dcb3vza', form, "tSlYZKFZED13mgzRN")
+            .then((response) => {
+                console.log(response.status + " " + response.text);
+            })
+
+        // vide les inputs
+        const inputs = document.querySelectorAll('#contact__form > input');
+        inputs.forEach(input => {
+            input.value = "";
+        });
+
+        // vide le texte area
+        document.querySelector('#contact__form > textarea').value = "";
+    }
+
     toggleNav = () => {
         const navList = document.querySelector("#nav__list");
         (navList.classList.contains("nav__list")) ? navList.classList.replace("nav__list", "nav__list--show") : navList.classList.replace("nav__list--show", "nav__list")
@@ -62,7 +83,6 @@ class Accueil extends React.Component {
         return (
             <div className="container">
                 <header>
-
                     <Nav handleClickAccueil={this.handleClickAccueil}
                         handleClickProjet={this.handleClickProjet}
                         handleClickContact={this.handleClickContact}
@@ -90,14 +110,15 @@ class Accueil extends React.Component {
                     }
                     {this.state.contact ?
                         <div className='main__contact'>
-                            <form id='contact__form'>
-                                <label for="name">Nom</label>
+                            <form onSubmit={this.handleSubmitContactForm} id='contact__form'>
+                                <h3>Envoyé moi un mail!</h3>
+                                <label autoFocus for="name">Nom</label>
                                 <input name="name"></input>
                                 <label for="email">Email</label>
                                 <input name="email" type='email'></input>
                                 <label for="message">Message</label>
                                 <textarea name='message' type="text"></textarea>
-                                <button></button>
+                                <button type='submit'>Envoyer</button>
                             </form>
                         </div>
                         : null
