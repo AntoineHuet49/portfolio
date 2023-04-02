@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
-import imageTodoList from "./../../../utils/images/fondEcranMontagne.jpg"
+
+// image Cards
 
 class Card extends React.Component {
     // state
@@ -12,7 +13,7 @@ class Card extends React.Component {
         return (
             <div className='card'>
                 <h3 className='card__title'>TodoList</h3>
-                    <img className='card__img' src={imageTodoList} alt=''></img>
+                    <img className='card__img' src={this.props.image} alt='projet'></img>
                 <p className='card__description'>Une TodoList développé avec Symfony et React</p>
             </div>
         )

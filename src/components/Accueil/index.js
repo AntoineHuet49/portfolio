@@ -4,15 +4,18 @@ import './index.css';
 import Nav from "./Nav";
 import emailjs from '@emailjs/browser';
 
+
+
+
 class Accueil extends React.Component {
     // properties
     constructor(props) {
         super(props);
         this.state = {
-            //TODO remettre comme il faut presentation sur true
             presentation: true,
             projet: false,
             contact: false,
+            imageTodoList: "./images/fondEcranMontagne.jpg",
             cards: []
         }
     }
@@ -104,7 +107,7 @@ class Accueil extends React.Component {
                     }
                     {this.state.projet ? 
                         <div className='main__projet'>
-
+                            <Card image={this.state.imageTodoList} />
                         </div> 
                         : null
                     }
