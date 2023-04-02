@@ -185,6 +185,11 @@ flouter la page quand la Nav s'affiche
         font-size: 2rem;
     }
 
+    .main__contact {
+        padding: 2rem;
+        width: 70%;
+    }
+
     .footer {
         position: relative;
     }

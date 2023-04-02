@@ -10,9 +10,9 @@ class Accueil extends React.Component {
         super(props);
         this.state = {
             //TODO remettre comme il faut presentation sur true
-            presentation: false,
+            presentation: true,
             projet: false,
-            contact: true,
+            contact: false,
             cards: []
         }
     }
@@ -104,7 +104,7 @@ class Accueil extends React.Component {
                     }
                     {this.state.projet ? 
                         <div className='main__projet'>
-                            <Card />                            
+
                         </div> 
                         : null
                     }
