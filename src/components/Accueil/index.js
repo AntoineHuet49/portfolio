@@ -15,7 +15,11 @@ class Accueil extends React.Component {
             presentation: true,
             projet: false,
             contact: false,
+
+            // projet todolist
             imageTodoList: "./images/fondEcranMontagne.jpg",
+            textTodoList : "Une TodoList développé avec Symfony et React.",
+
             cards: []
         }
     }
@@ -101,13 +105,13 @@ class Accueil extends React.Component {
                     {this.state.presentation ? 
                         <div className='main__presentation'>
                             <h3>Bienvenue !</h3>
-                            <p>Je me présente, je suis un développeur agé de 27ans spécialisé dans le back-end, surtout sur Symfony. Je sais néanmoins faire du front-end égualement comme le montre ce site codé grâce au Framework React. Sur ce site vous pouvez retrouver mes different projet perso et en entreprise, afin de voir ce que je suis capable de faire. Vous pourrez télécharger mon CV si vous le souhaitez et me contecter par mail. Bonne visite !</p>
+                            <p>Je me présente, je suis un développeur âgé de 27 ans spécialisé dans le back-end, surtout sur Symfony. Je sais néanmoins faire du front-end également comme le montre ce site codé grâce au Framework React. Sur ce site, vous pouvez retrouver mes différents projets perso et en entreprise, afin de voir ce que je suis capable de faire. Vous pourrez télécharger mon CV si vous le souhaitez et me contacter par mail. Bonne visite !</p>
                         </div> 
                         : null
                     }
                     {this.state.projet ? 
                         <div className='main__projet'>
-                            <Card image={this.state.imageTodoList} />
+                            <Card image={this.state.imageTodoList} text={this.state.textTodoList} />
                         </div> 
                         : null
                     }
