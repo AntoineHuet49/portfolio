@@ -20,7 +20,7 @@
 
 .menuBtn {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 2rem;
     padding-top: 2rem;
 
@@ -89,7 +89,7 @@
 
 @media (width < 900px) and (width > 760px) {
     #nav {
-        justify-content: end;
+        justify-content: flex-end;
     }
     
     .nav__list, .nav__list--show {
@@ -108,7 +108,7 @@
 
 @media (width < 760px) {
     #nav {
-        justify-content: end;
+        justify-content: flex-end;
     }
 
     .menuBtn {
