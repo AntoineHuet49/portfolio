@@ -14,7 +14,7 @@ class Card extends React.Component {
             <div className='card'>
                 <h3 className='card__title'>TodoList</h3>
                     <img className='card__img' src={this.props.image} alt='projet'></img>
-                <p className='card__description'>Une TodoList développé avec Symfony et React</p>
+                <p className='card__description'>{this.props.text}</p>
             </div>
         )
     }
