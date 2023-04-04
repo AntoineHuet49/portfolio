@@ -19,7 +19,7 @@ class Accueil extends React.Component {
             // projet todolist
             imageTodoList: "./images/Todolist.com.png",
             textTodoList : "Une TodoList développé avec Symfony et React.",
-            link: "http://s957385953.onlinehome.fr/",
+            link: "www.todolist.antoinehuet.com",
 
             cards: []
         }
