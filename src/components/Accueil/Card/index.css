@@ -18,7 +18,8 @@
 }
 
 .card__img {
-    width: 90%;
+    width: 100%;
+    height: 100%;
 
     margin: 0.5rem;
 
@@ -29,6 +30,15 @@
 
 .card__description {
     margin: 1rem;
+}
+
+.card > a {
+    display: flex;
+
+    justify-content: center;
+    align-content: center;
+
+    z-index: 1;
 }
 
 @media (width < 900px) {

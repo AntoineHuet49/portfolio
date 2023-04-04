@@ -17,8 +17,9 @@ class Accueil extends React.Component {
             contact: false,
 
             // projet todolist
-            imageTodoList: "./images/fondEcranMontagne.jpg",
+            imageTodoList: "./images/Todolist.com.png",
             textTodoList : "Une TodoList développé avec Symfony et React.",
+            link: "http://s957385953.onlinehome.fr/",
 
             cards: []
         }
@@ -111,7 +112,11 @@ class Accueil extends React.Component {
                     }
                     {this.state.projet ? 
                         <div className='main__projet'>
-                            <Card image={this.state.imageTodoList} text={this.state.textTodoList} />
+                            <Card 
+                                image={this.state.imageTodoList} 
+                                text={this.state.textTodoList} 
+                                link={this.state.link}
+                            />
                         </div> 
                         : null
                     }
