@@ -1,9 +1,9 @@
 import React from 'react';
-import Card from './Card';
 import './index.css';
-import Nav from "./Nav";
-import emailjs from '@emailjs/browser';
-
+import Nav from "../Nav";
+import Presentation from '../Main/Presentation';
+import Projet from '../Main/Projet';
+import Contact from '../Main/Contact';
 
 
 
@@ -15,13 +15,6 @@ class Accueil extends React.Component {
             presentation: true,
             projet: false,
             contact: false,
-
-            // projet todolist
-            imageTodoList: "./images/Todolist.com.png",
-            textTodoList : "Une TodoList développé avec Symfony et React.",
-            link: "http://todolist.antoinehuet.com",
-
-            cards: []
         }
     }
 
@@ -60,25 +53,6 @@ class Accueil extends React.Component {
         this.toggleNav();
     }
 
-    handleSubmitContactForm = (e) => {
-        e.preventDefault();
-
-        const form = document.getElementById('contact__form');
-
-        emailjs.sendForm('service_yki4w3w', 'template_dcb3vza', form, "tSlYZKFZED13mgzRN")
-            .then((response) => {
-                console.log(response.status + " " + response.text);
-            })
-
-        // vide les inputs
-        const inputs = document.querySelectorAll('#contact__form > input');
-        inputs.forEach(input => {
-            input.value = "";
-        });
-
-        // vide le texte area
-        document.querySelector('#contact__form > textarea').value = "";
-    }
 
     toggleNav = () => {
         const navList = document.querySelector("#nav__list");
@@ -98,43 +72,28 @@ class Accueil extends React.Component {
                     />
                 </header>
                 <div className='content'>
+                
                     <h1 className="mainTitle">Huet Antoine</h1>
                     <span className='title__barre'></span>
                     <h2 className="secondTitle">Développeur web et web mobile</h2>
 
                     <main className='main'>
-                    {this.state.presentation ? 
-                        <div className='main__presentation'>
-                            <h3>Bienvenue !</h3>
-                            <p>Jeune développeur de 27 ans, je me suis spécialisé dans le back-end, surtout sur Symfony. Je sais également coder du front-end, notamment avec le Framework React, comme le montre ce site. Ici, vous pouvez retrouver mes différents projets perso et d'entreprise, réalisations montrant ce que je suis capable de faire. Vous pouvez aussi télécharger mon CV et me contacter par mail. Bonne visite !</p>
-                        </div> 
-                        : null
-                    }
-                    {this.state.projet ? 
-                        <div className='main__projet'>
-                            <Card 
-                                image={this.state.imageTodoList} 
-                                text={this.state.textTodoList} 
-                                link={this.state.link}
-                            />
-                        </div> 
-                        : null
-                    }
-                    {this.state.contact ?
-                        <div className='main__contact'>
-                            <form onSubmit={this.handleSubmitContactForm} id='contact__form'>
-                                <h3>Envoyez moi un mail!</h3>
-                                <label autoFocus for="name">Nom</label>
-                                <input name="name"></input>
-                                <label for="email">Email</label>
-                                <input name="email" type='email'></input>
-                                <label for="message">Message</label>
-                                <textarea name='message' type="text"></textarea>
-                                <button type='submit'>Envoyer</button>
-                            </form>
-                        </div>
-                        : null
-                    }
+                        
+                        {this.state.presentation ? 
+                            <Presentation />
+                            : null
+                        }
+
+                        {this.state.projet ? 
+                            <Projet />
+                            : null
+                        }
+
+                        {this.state.contact ?
+                            <Contact />
+                            : null
+                        }
+
                     </main>
                 </div>
                 <div className='background'></div>

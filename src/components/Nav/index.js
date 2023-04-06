@@ -1,6 +1,6 @@
 import React from "react";
 import './index.css';
-import CV from '../../../utils/pdf/CV HUET Antoine.pdf'
+import CV from '../../utils/pdf/CV HUET Antoine.pdf'
 
 class Nav extends React.Component {
     // state
