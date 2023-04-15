@@ -1,5 +1,6 @@
 import React from "react";
 import Card from '../Card';
+import './projet.css';
 
 class Projet extends React.Component {
     // properties
@@ -9,7 +10,7 @@ class Projet extends React.Component {
             // projet todolist
             imageTodoList: "./images/Todolist.com.png",
             textTodoList : "Une TodoList développé avec Symfony et React.",
-            link: "http://todolist.antoinehuet.com",
+            link: "https://todolist.antoinehuet.com",
         }
     }
 

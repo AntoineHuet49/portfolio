@@ -1,5 +1,6 @@
 import React from "react";
 import emailjs from '@emailjs/browser';
+import './contact.css'
 
 class Contact extends React.Component {
     // properties
@@ -31,8 +32,10 @@ class Contact extends React.Component {
             <div className='main__contact'>
                 <form onSubmit={this.handleSubmitContactForm} id='contact__form'>
                     <h3>Envoyez moi un mail!</h3>
-                    <label autoFocus for="name">Nom</label>
-                    <input name="name"></input>
+                    <label autoFocus for="lastname">Nom</label>
+                    <input name="lastname"></input>
+                    <label autoFocus for="firstname">Prénom</label>
+                    <input name="firstname"></input>
                     <label for="email">Email</label>
                     <input name="email" type='email'></input>
                     <label for="message">Message</label>

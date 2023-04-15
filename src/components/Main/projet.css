@@ -1,0 +1,13 @@
+.main__projet {
+    width: 90%;
+    background-color: rgba(191, 184, 178, 0.7);
+
+    border: 2px solid beige;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin: 5rem 0;
+}

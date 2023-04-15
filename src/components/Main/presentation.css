@@ -1,0 +1,30 @@
+.main__presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 10rem;
+
+    background-color: rgba(191, 184, 178, 0.75);
+
+    width: 70%;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.resume > h3 {
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-bottom: 1.4rem;
+}
+
+.resume > p {
+    text-align: justify;
+    line-height: 1.3rem;
+}
