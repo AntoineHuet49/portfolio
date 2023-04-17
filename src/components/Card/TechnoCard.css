@@ -1,0 +1,24 @@
+.techno__card {
+    width: 20%;
+    margin: 1rem 0.5rem;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.techno__card > img {
+    width: 100%;
+    height: fit-content;
+
+    align-self: center;
+}
+
+.techno__card > h4 {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+
+    justify-self: flex-end;
+}

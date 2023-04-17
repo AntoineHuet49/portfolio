@@ -1,6 +1,6 @@
 import React from "react";
-import Card from '../Card';
 import './projet.css';
+import ProjectCard from "../Card/ProjectCard";
 
 class Projet extends React.Component {
     // properties
@@ -8,9 +8,11 @@ class Projet extends React.Component {
         super(props);
         this.state = {
             // projet todolist
+            titleTodoList: "TodoList",
             imageTodoList: "./images/Todolist.com.png",
             textTodoList : "Une TodoList développé avec Symfony et React.",
-            link: "https://todolist.antoinehuet.com",
+            linkTodoList : "https://todolist.antoinehuet.com",
+            altTodoList : "Projet Todolist",
         }
     }
 
@@ -20,10 +22,12 @@ class Projet extends React.Component {
     render() {
         return (
             <div className='main__projet'>
-                <Card
+                <ProjectCard
+                    title={this.state.titleTodoList}
                     image={this.state.imageTodoList} 
                     text={this.state.textTodoList} 
-                    link={this.state.link}
+                    link={this.state.linkTodoList}
+                    alt={this.state.altTodoList}
                 />
             </div> 
         )

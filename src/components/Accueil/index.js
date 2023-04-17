@@ -96,7 +96,9 @@ class Accueil extends React.Component {
 
                     </main>
                 </div>
+                
                 <div className='background'></div>
+
                 <footer className='footer'>
 
                 </footer>

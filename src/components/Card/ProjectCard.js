@@ -1,9 +1,9 @@
 import React from "react";
-import "./index.css";
+import "./ProjectCard.css";
 
 // image Cards
 
-class Card extends React.Component {
+class ProjectCard extends React.Component {
     // state
 
     //function
@@ -12,9 +12,9 @@ class Card extends React.Component {
     render() {
         return (
             <div className='card'>
-                <h3 className='card__title'>TodoList</h3>
+                <h3 className='card__title'>{this.props.title}</h3>
                     <a href={this.props.link} target="blank">
-                        <img className='card__img' src={this.props.image} alt='projet'></img>
+                        <img className='card__img' src={this.props.image} alt={this.props.alt}></img>
                     </a>
                 <p className='card__description'>{this.props.text}</p>
             </div>
@@ -22,4 +22,4 @@ class Card extends React.Component {
     }
 }
 
-export default Card;
+export default ProjectCard;
