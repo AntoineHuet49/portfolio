@@ -45,7 +45,7 @@ class Nav extends React.Component {
                     <li><button onClick={this.props.handleClickAccueil} className="nav__accueil">Accueil</button></li>
                     <li><button onClick={this.props.handleClickProjet} className="nav__projet">Projet</button></li>
                     <li><button onClick={this.props.handleClickContact} className="nav__contact">Contact</button></li>
-                    <li><button className="nav__CV"><a href={CV} download >CV</a></button></li>
+                    <li><button onClick={this.props.handleClickCV} className="nav__CV">CV</button></li>
                 </ul>
                 <div className="menuBtn">
                     <button className="menu" onClick={this.props.handleMenuBtnClick} aria-label="Main Menu">

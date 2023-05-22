@@ -13,10 +13,10 @@ class Accueil extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            presentation: false,
+            presentation: true,
             projet: false,
             contact: false,
-            CV: true
+            CV: false
         }
     }
 
