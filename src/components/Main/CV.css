@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+.cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__cv {
+    font-family: 'Arimo', sans-serif;
+
+    background-color: #EAD6BB;
+    box-shadow: 0px 0px 10px 5px black;
+    color: #7D5932;
+
+    margin-top: 2rem;
+
+    display: flex;
+    grid-template-columns: 100%;
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 210mm;
+    height: 297mm;
+}
+
+h6 {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+/* coté gauche */
+
+.left {
+    width: calc(100% / 3);
+
+    border-right: solid 3px #7D5932;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.left_title {
+    border-top: 1px solid #7D5932;
+    border-bottom: 1px solid #7D5932;
+    padding: 0 0 1rem 0;
+    margin-top: 1rem;
+}
+
+.left_h6 {
+    padding-left: 2.5rem;
+}
+
+/* gauche -> image */
+
+.picture {
+    transform: scale(1.5);
+}
+
+.picture > img {
+    width: 100%;
+}
+
+/* gauche -> nom */
+
+.name {
+    margin-top: 6rem;
+    padding-left: 2.5rem;
+}
+
+.name > h4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.lastname {
+    font-size: 2rem;
+}
+
+.firstname {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* gauche -> résumé */
+
+.text {
+    margin-top: 1.5rem;
+    padding-right: 1rem;
+    padding-left: 2.5rem;
+
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+}
+
+/* gauche -> informations */
+
+.informations > ul {
+    margin: 0.7rem 0;
+    padding-left: 1.8rem;
+}
+
+.informations > ul > li {
+    display: flex;
+    align-items: center;
+
+    margin-top: 0.3rem;
+}
+
+.informations > ul > li > p {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.informations > ul > li > img {
+    width: 15%;
+}
+
+.informations > ul > li > p > a {
+    color: #7D5932;
+    text-decoration: underline;
+}
+
+/*  gauche -> formation */
+
+.formation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem 1rem 0 1rem;
+}
+
+.formation > p {
+    margin: 0.5rem;
+
+    font-weight: 600;
+}
+
+.formation > p > a {
+    color: #7D5932;
+    text-decoration: underline; 
+}
+
+/*  coté droit */
+
+.right {
+    width: calc((100% / 3) * 2);
+
+    background-color: #FFF9EE;
+}
+
+/* droite -> première div */
+
+.right__one {
+    text-align: center;
+    padding: 1rem 0 0 0.5rem;
+}
+
+.right__one > h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.right__one > p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* droite -> deuxième et quatrième div */
+
+.right__two, .right__four {
+    padding: 1rem 0 1rem 4rem;
+    margin: 1rem 0;
+
+    background-color: #7D5932;
+    color: #FFF9EE;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* droite -> troisième div */
+
+.right__three, .right__five {
+    padding: 0rem 0 0rem 4rem;
+
+    line-height: 1.2rem;
+}
+
+.date {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.right__three > p > a, .right__three > ul > li > a {
+    position: relative;
+    z-index: 1;
+
+    color: #7D5932;
+    text-decoration: underline;
+}
+
+.right__three > ul > li > a {
+    font-style: italic;
+}
+
+.right__three > ul, .five__bottom > div > ul {
+    padding-left: 1rem;
+    list-style: inside;
+    list-style-type: disc;
+}
+
+/* droite -> cinquième div */
+
+.five__bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.five__bottom > div {
+    width: 50%;
+}
+
+.five__bottom > div > ul {
+    padding-left: 2rem;
+}
+
+.five__bottom > div > ul > li {
+    padding-right: 2rem;
+    text-align: left;
+    list-style-position: inside;
+    text-indent: -1.4rem;
+}
+
+/*  button */
+
+.download {
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+    width: 60%;
+}
+
+.download > a {
+    background-color: #EAD6BB;
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+
+    border-radius: 0.4rem;
+
+    font-weight: 600;
+}
+
+.download > a:hover {
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+.download > a:active {
+    box-shadow: inset 1px 1px 10px 1px black;
+}
+
+.mobile {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+
+    text-align: center;
+    line-height: 2rem;
+
+    color: #EAD6BB;
+}
+
+.mobile > img {
+    width: 20%;
+}
+
+@media (width < 900px) and (width > 760px) {
+    .cv {
+        width: 75%;
+    }
+
+    .download {
+        width: 80%;
+        margin-top: 1rem;
+    }
+}
+
+@media (width < 760px) {
+    .cv {
+        width: 100%;
+    }
+
+    .download {
+        width: 80%;
+        margin-top: 1rem;
+    }
+}

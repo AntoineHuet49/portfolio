@@ -4,6 +4,7 @@ import Nav from "../Nav";
 import Presentation from '../Main/Presentation';
 import Projet from '../Main/Projet';
 import Contact from '../Main/Contact';
+import CV from '../Main/CV';
 
 
 
@@ -12,9 +13,10 @@ class Accueil extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            presentation: true,
+            presentation: false,
             projet: false,
             contact: false,
+            CV: true
         }
     }
 
@@ -24,6 +26,7 @@ class Accueil extends React.Component {
         this.setState({presentation: true});
         this.setState({projet: false});
         this.setState({contact: false});
+        this.setState({CV: false});
     }
 
     handleClickProjet = (e) => {
@@ -31,6 +34,7 @@ class Accueil extends React.Component {
         this.setState({presentation: false});
         this.setState({projet: true});
         this.setState({contact: false});
+        this.setState({CV: false});
     }
 
     handleClickContact = (e) => {
@@ -38,6 +42,15 @@ class Accueil extends React.Component {
         this.setState({presentation: false});
         this.setState({projet: false});
         this.setState({contact: true});
+        this.setState({CV: false});
+    }
+
+    handleClickCV = (e) => {
+        this.handleMenuBtnClick();
+        this.setState({presentation: false});
+        this.setState({projet: false});
+        this.setState({contact: false});
+        this.setState({CV: true});
     }
 
     handleMenuBtnClick = (e) => {
@@ -68,6 +81,7 @@ class Accueil extends React.Component {
                     <Nav handleClickAccueil={this.handleClickAccueil}
                         handleClickProjet={this.handleClickProjet}
                         handleClickContact={this.handleClickContact}
+                        handleClickCV={this.handleClickCV}
                         handleMenuBtnClick={this.handleMenuBtnClick}
                     />
                 </header>
@@ -91,6 +105,11 @@ class Accueil extends React.Component {
 
                         {this.state.contact ?
                             <Contact />
+                            : null
+                        }
+
+                        {this.state.CV ?
+                            <CV/>
                             : null
                         }
 
